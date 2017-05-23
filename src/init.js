@@ -45,6 +45,10 @@ $(document).ready(function() {
     }
   });
 
+  $('.president').on('mouseover', function(event) {
+
+  });
+
 });
 
-// __proto__
+// next step is to make seperate subclasses for each president

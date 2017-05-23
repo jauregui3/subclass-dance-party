@@ -1,6 +1,7 @@
 var PresidentDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('president');
+  this.$node.removeClass('dancer');
   // this.$node = $('<span class="president"></span>');
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -14,6 +15,7 @@ PresidentDancer.prototype = Object.create(Dancer.prototype);
 
 PresidentDancer.prototype.constructor = PresidentDancer;
 
+/*
 PresidentDancer.prototype.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
   // this.$node.toggle();
@@ -22,4 +24,6 @@ PresidentDancer.prototype.step = function() {
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
+
 };
+*/

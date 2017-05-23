@@ -31,7 +31,20 @@ body, a:link, a:visited, a:active{
   /*border:10px solid blue;
   border-radius:10px;
   */
-  background-image: url("");
+  background: url("trump_head_mouseover_2.png");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  width: 100px;
+  height: 120px;
+  position:absolute;
+}
+
+.president:hover {
+  background-image: url("trump_head.png");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  width: 100px;
+  height: 120px;
   position:absolute;
 }
 .animal{
