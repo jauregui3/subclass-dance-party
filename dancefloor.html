@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Object Dance Party</title>
+    <title>Presidential Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
     <script src="src/animalDancer.js"></script>
-    <script src="src/presidentDancer.js"></script>
+    <script src="src/trumpDancer.js"></script>
+    <script src="src/obamaDancer.js"></script>
+    <script src="src/bushDancer.js"></script>
   </head>
   <body>
+
+  <audio>
+    <source src="trump_china.mp3"></source>
+  </audio>
+
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="AnimalDancer">add an animal dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="PresidentDancer">add a president dancer</a>
+      <span class="title">Presidential Dance Party</span>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">Add a Blinky Dancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="AnimalDancer">Add an Animal Dancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="TrumpDancer">Add a Trump Dancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="ObamaDancer">Add an Obama Dancer</a>
+      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BushDancer">Add a Bush Dancer</a>
       <a href="#" class="addLineUpButton">Line Up!</a>
+      <a href="#" class="findClosest">Find a partner!</a>
 
     </div>
     <script src="src/init.js"></script>

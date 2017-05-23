@@ -37,3 +37,4 @@ Dancer.prototype.lineup = function(value) {
   };
   this.$node.css(styleSettings);
 };
+

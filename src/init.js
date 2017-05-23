@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.bushDancers = []
 
 
   $('.addDancerButton').on('click', function(event) {
@@ -24,26 +25,46 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
     // make a dancer with a random position
 
+
+
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
-    window.dancers.push(dancer);
+    if (dancer.constructor === BushDancer) {
+      window.bushDancers.push(dancer);
+    } else {
+      window.dancers.push(dancer);
+    }
   });
+
 
   $('.addLineUpButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
       var dancer = window.dancers[i];
-      if (dancer.constructor === AnimalDancer) {
+      if (dancer.constructor === ObamaDancer) {
         dancer.lineup('10%');
-      } else if(dancer.constructor === PresidentDancer){
+      }
+      if(dancer.constructor === TrumpDancer){
         dancer.lineup('90%');
       }
+    }
+    for (var i = 0; i < window.bushDancers.length; i++) {
+      var bushDancer = window.bushDancers[i];
+      bushDancer.wander();
+    }
 
+  });
+
+  $('.findClosest').on('click', function(event) {
+    for (var i = 0; i < window.bushDancers.length; i++) {
+      var dancer = window.bushDancers[i];
+      dancer.findClosest();
     }
   });
+
 
   $('.president').on('mouseover', function(event) {
 

@@ -11,7 +11,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, .addLineUpButton {
+.title, .addDancerButton, .addLineUpButton, .findClosest {
   padding:5px 12px;
   float:right;
 }
@@ -27,7 +27,7 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.president{
+.trump{
   /*border:10px solid blue;
   border-radius:10px;
   */
@@ -37,9 +37,13 @@ body, a:link, a:visited, a:active{
   width: 100px;
   height: 120px;
   position:absolute;
+  -webkit-animation: head-bob 3s infinite; /* Safari 4+ */
+  -moz-animation:    head-bob 3s infinite; /* Fx 5+ */
+  -o-animation:      head-bob 3s infinite; /* Opera 12+ */
+  animation:         head-bob 3s infinite; /* IE 10+, Fx 29+ */
 }
 
-.president:hover {
+.trump:hover {
   background-image: url("trump_head.png");
   background-repeat: no-repeat;
   background-size: 75%;
@@ -51,4 +55,74 @@ body, a:link, a:visited, a:active{
   border:10px solid green;
   border-radius:10px;
   position:absolute;
+}
+
+.obama{
+  /*border:10px solid blue;
+  border-radius:10px;
+  */
+  background: url("obama-head.png");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  width: 100px;
+  height: 120px;
+  position:absolute;
+  -webkit-animation: head-bob 3s infinite; /* Safari 4+ */
+  -moz-animation:    head-bob 3s infinite; /* Fx 5+ */
+  -o-animation:      head-bob 3s infinite; /* Opera 12+ */
+  animation:         head-bob 3s infinite; /* IE 10+, Fx 29+ */
+}
+
+.obama:hover {
+  background-image: url("obama_head_mouseover.png");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  width: 100px;
+  height: 120px;
+  position:absolute;
+}
+
+.bush{
+  /*border:10px solid blue;
+  border-radius:10px;
+  */
+  background: url("bush_head_normal.png");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  width: 100px;
+  height: 120px;
+  position:absolute;
+  -webkit-animation: head-bob 3s infinite; /* Safari 4+ */
+  -moz-animation:    head-bob 3s infinite; /* Fx 5+ */
+  -o-animation:      head-bob 3s infinite; /* Opera 12+ */
+  animation:         head-bob 3s infinite; /* IE 10+, Fx 29+ */
+}
+
+.bush:hover {
+  background-image: url("bush_head_3.png");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  width: 100px;
+  height: 120px;
+  position:absolute;
+}
+
+@-webkit-keyframes head-bob {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes head-bob {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes head-bob {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes head-bob {
+  0%   { transform: rotate(-30deg); }
+  25% { transform: rotate(30deg); }
+  50% { transform: rotate(-30deg); }
+  75% { transform: rotate(30deg); }
+  100% { transform: rotate(-30deg); }
 }
