@@ -1,6 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
-  window.bushDancers = []
+  window.bushDancers = [];
 
 
   $('.addDancerButton').on('click', function(event) {
