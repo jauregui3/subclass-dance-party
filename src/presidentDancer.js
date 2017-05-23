@@ -1,5 +1,7 @@
-var BlinkyDancer = function(top, left, timeBetweenSteps) {
+var PresidentDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('president');
+  // this.$node = $('<span class="president"></span>');
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
@@ -8,11 +10,11 @@ var BlinkyDancer = function(top, left, timeBetweenSteps) {
   //this.$node = $('<span class="dancer"></span>');
 };
 
-BlinkyDancer.prototype = Object.create(Dancer.prototype);
+PresidentDancer.prototype = Object.create(Dancer.prototype);
 
-BlinkyDancer.prototype.constructor = BlinkyDancer;
+PresidentDancer.prototype.constructor = PresidentDancer;
 
-BlinkyDancer.prototype.step = function() {
+PresidentDancer.prototype.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
   // this.$node.toggle();
   Dancer.prototype.step.call(this);
