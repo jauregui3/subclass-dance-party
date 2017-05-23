@@ -21,29 +21,38 @@ BushDancer.prototype.constructor = BushDancer;
 //   this.findClosest();
 // }
 
-BushDancer.prototype.makeNewPosition = function(){
+// BushDancer.prototype.makeNewPosition = function(){
 
-  // Get viewport dimensions (remove the dimension of the div)
-  var h = $(window).height() - 50;
-  var w = $(window).width() - 50;
+//   // Get viewport dimensions (remove the dimension of the div)
+//   var h = $(window).height() - 50;
+//   var w = $(window).width() - 50;
 
-  var nh = Math.floor(Math.random() * h);
-  var nw = Math.floor(Math.random() * w);
+//   var nh = Math.floor(Math.random() * h);
+//   var nw = Math.floor(Math.random() * w);
 
-  return [nh,nw];
+//   return [nh,nw];
 
-};
+// };
 
 BushDancer.prototype.wander = function(){
-  var newq = this.makeNewPosition();
-  $(this.$node).animate({ top: newq[0], left: newq[1] }, function(){
+  var lastTrump = window.trumpDancers[trumpDancers.length - 1];
+  var newq = [lastTrump.top, lastTrump.left];
+  $('.bush').animate({ top: newq[0], left: newq[1] }, function(){
     this.wander();
-    // if (// bumps into prez) {
-    //   this.wander();
-    // }
   });
 
 };
+
+/*
+BushDancer.prototype.wander = function(){
+   var newq = this.makeNewPosition();
+   $('.bush').animate({ top: newq[0], left: newq[1] }, function(){
+     this.wander();
+      }
+   });
+
+};
+*/
 
 BushDancer.prototype.findClosest = function(){
   var min;
@@ -53,7 +62,7 @@ BushDancer.prototype.findClosest = function(){
     dancer = window.dancers[i];
     distance = Math.sqrt(Math.pow(dancer.left - this.left, 2) + Math.pow(dancer.top - this.top, 2));
     if(distance < min || min === undefined){
-      this.setPosition(dancer.left, dancer.top);
+      this.coordinates = [dancer.left, dancer.top];
       min = distance;
     }
   }

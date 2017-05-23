@@ -11,7 +11,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton, .addLineUpButton, .findClosest {
+.title, .addDancerButton, .addLineUpButton, .findClosest, .convergeBushToTrumpButton, .convergeTrumpToObamaButton {
   padding:5px 12px;
   float:right;
 }
@@ -51,12 +51,13 @@ body, a:link, a:visited, a:active{
   height: 120px;
   position:absolute;
 }
+/*
 .animal{
   border:10px solid green;
   border-radius:10px;
   position:absolute;
 }
-
+*/
 .obama{
   /*border:10px solid blue;
   border-radius:10px;

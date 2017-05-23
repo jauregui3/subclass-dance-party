@@ -1,6 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
   window.bushDancers = [];
+  window.trumpDancers = [];
 
 
   $('.addDancerButton').on('click', function(event) {
@@ -35,7 +36,9 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
     if (dancer.constructor === BushDancer) {
       window.bushDancers.push(dancer);
-    } else {
+    } else if(dancer.constructor === TrumpDancer){
+      window.trumpDancers.push(dancer);
+    }else{
       window.dancers.push(dancer);
     }
   });
@@ -47,16 +50,57 @@ $(document).ready(function() {
       if (dancer.constructor === ObamaDancer) {
         dancer.lineup('10%');
       }
-      if(dancer.constructor === TrumpDancer){
-        dancer.lineup('90%');
+    }
+    for(var i = 0; i<window.trumpDancers.length; i++){
+      var trumpDancer = window.trumpDancers[i];
+      if(trumpDancer.constructor === TrumpDancer){
+        trumpDancer.lineup('90%');
       }
     }
+
     for (var i = 0; i < window.bushDancers.length; i++) {
+      var bushDancer = window.bushDancers[i];
+      // bushDancer.wander();
+    }
+
+  });
+
+  $('.convergeBushToTrumpButton').on('click', function(event){
+    for(var i = 0; i<window.bushDancers.length ; i++){
       var bushDancer = window.bushDancers[i];
       bushDancer.wander();
     }
 
+    //var lastTrump = window.trumpDancers[window.trumpDancers.length - 1];
+    //console.log(lastTrump.left);
+
+    //for(var i = 0; i<window.bushDancers.length; i++){
+      //console.log('hello!!');
+    //}
+      //$('.bush').animate({ top: lastTrump.top, left: lastTrump.left }, function(){
+
+      //bushDancers[i].setPosition(lastTrump.top, lastTrump.left);
+    // });
   });
+
+  $('.convergeTrumpToObamaButton').on('click', function(event){
+    for(var i = 0; i<window.trumpDancers.length ; i++){
+      var trumpDancer = window.trumpDancers[i];
+      trumpDancer.wander();
+    }
+
+    //var lastTrump = window.trumpDancers[window.trumpDancers.length - 1];
+    //console.log(lastTrump.left);
+
+    //for(var i = 0; i<window.bushDancers.length; i++){
+      //console.log('hello!!');
+    //}
+      //$('.bush').animate({ top: lastTrump.top, left: lastTrump.left }, function(){
+
+      //bushDancers[i].setPosition(lastTrump.top, lastTrump.left);
+    // });
+  });
+
 
   $('.findClosest').on('click', function(event) {
     for (var i = 0; i < window.bushDancers.length; i++) {
@@ -65,11 +109,7 @@ $(document).ready(function() {
     }
   });
 
-
-  $('.president').on('mouseover', function(event) {
-
-  });
-
 });
 
-// next step is to make seperate subclasses for each president
+// add presidential music
+// try to add individual sound files for each president
