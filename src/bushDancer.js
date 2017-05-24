@@ -54,20 +54,6 @@ BushDancer.prototype.wander = function(){
 };
 */
 
-BushDancer.prototype.findClosest = function(){
-  var min;
-  var dancer;
-  var distance;
-  for (var i = 0; i < window.dancers.length; i++) {
-    dancer = window.dancers[i];
-    distance = Math.sqrt(Math.pow(dancer.left - this.left, 2) + Math.pow(dancer.top - this.top, 2));
-    if(distance < min || min === undefined){
-      this.coordinates = [dancer.left, dancer.top];
-      min = distance;
-    }
-  }
-};
-
 
 /*
 obamaDancer.prototype.step = function() {

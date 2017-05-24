@@ -3,6 +3,11 @@ $(document).ready(function() {
   window.bushDancers = [];
   window.trumpDancers = [];
 
+  // var audio = $("audio")[0];
+  // $('.trump').mouseenter(function(){
+  //   audio.play();
+  // });
+
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -19,6 +24,20 @@ $(document).ready(function() {
      * to the stage.
      */
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
+
+    // var trumpAudio = $("audio")[0];
+    // var bushAudio = $("audio")[1];
+
+
+    // if (dancerMakerFunctionName === "TrumpDancer") {
+    //   trumpAudio.play();
+    // }
+    // if (dancerMakerFunctionName === "BushDancer") {
+    //   $("audio")[0].play();
+    // }
+    // if (dancerMakerFunctionName === "ObamaDancer") {
+    //   // $("audio")[0].play();
+    // }
     //var dancerMakerFunctionName = $(BlinkyDancer).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
@@ -83,6 +102,7 @@ $(document).ready(function() {
     // });
   });
 
+
   $('.convergeTrumpToObamaButton').on('click', function(event){
     for(var i = 0; i<window.trumpDancers.length ; i++){
       var trumpDancer = window.trumpDancers[i];
@@ -109,7 +129,18 @@ $(document).ready(function() {
     }
   });
 
+  // var audio = $("audio")[0];
+  // console.log(audio);
+  // $('.trumpTalks').on('mouseenter', function(event) {
+  //   for (var i = 0; i < window.trumpDancers.length; i++) {
+  //     var dancer = window.trumpDancers[i];
+  //     $("img").mouseenter(function(){
+  //         audio.play();
+  //       });
+  //   }
+  // });
 });
+
 
 // add presidential music
 // try to add individual sound files for each president

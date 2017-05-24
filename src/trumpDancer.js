@@ -27,8 +27,13 @@ TrumpDancer.prototype.wander = function(){
   $('.trump').animate({ top: newq[0], left: newq[1] }, function(){
     this.wander();
   });
-
 };
+
+
+
+  // $('.trump').mouseenter(function(){
+  //   audio.play();
+  // });
 
 
 /*
