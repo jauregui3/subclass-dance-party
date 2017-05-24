@@ -33,9 +33,6 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .trump{
-  /*border:10px solid blue;
-  border-radius:10px;
-  */
   background: url("trump_head_mouseover_2.png");
   background-repeat: no-repeat;
   background-size: 75%;
@@ -56,17 +53,8 @@ body, a:link, a:visited, a:active{
   height: 120px;
   position:absolute;
 }
-/*
-.animal{
-  border:10px solid green;
-  border-radius:10px;
-  position:absolute;
-}
-*/
+
 .obama{
-  /*border:10px solid blue;
-  border-radius:10px;
-  */
   background: url("obama-head.png");
   background-repeat: no-repeat;
   background-size: 75%;
@@ -89,9 +77,6 @@ body, a:link, a:visited, a:active{
 }
 
 .bush{
-  /*border:10px solid blue;
-  border-radius:10px;
-  */
   background: url("bush_head_normal.png");
   background-repeat: no-repeat;
   background-size: 75%;

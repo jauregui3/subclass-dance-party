@@ -20,7 +20,6 @@ Dancer.prototype.step = function() {
   //setTimeout(bind(Dancer.prototype.step, this));
   //setTimeout(x, this.timeBetweenSteps);
 };
-// Dancer.step();
 
 Dancer.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag

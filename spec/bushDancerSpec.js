@@ -5,17 +5,11 @@ describe('bushDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    bushDancer = new bushDancer(10, 20, timeBetweenSteps);
+    bushDancer = new BushDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
     expect(bushDancer.$node).to.be.an.instanceof(jQuery);
-  });
-
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(bushDancer.$node, 'toggle');
-    bushDancer.step();
-    expect(bushDancer.$node.toggle.called).to.be.true;
   });
 
   describe('dance', function() {

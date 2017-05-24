@@ -5,17 +5,16 @@ describe('trumpDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    trumpDancer = new trumpDancer(10, 20, timeBetweenSteps);
+    trumpDancer = new TrumpDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
     expect(trumpDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(trumpDancer.$node, 'toggle');
-    trumpDancer.step();
-    expect(trumpDancer.$node.toggle.called).to.be.true;
+  it('should allow passed in size parameters to set location', function() {
+    expect(trumpDancer.top).to.be.equal(10);
+    expect(trumpDancer.left).to.be.equal(20);
   });
 
   describe('dance', function() {
